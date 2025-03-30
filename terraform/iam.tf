@@ -29,7 +29,7 @@ resource "aws_iam_policy" "ecs_ecr_pull_policy" {
           "ecr:BatchGetImage",
           "ecr:DescribeRepositories"
         ]
-        Resource = "arn:aws:ecr:${var.aws_region}:${data.aws_caller_identity.current.account_id}:repository/${var.acr_name}"
+        Resource = "arn:aws:ecr:${var.aws_region}:${data.aws_caller_identity.current.account_id}:repository/${var.ecr_name}"
       },
       {
         Effect = "Allow"
