@@ -23,7 +23,7 @@ resource "aws_ecs_task_definition" "blockchain_app_task" {
   }
 }
 
-resource "aws_ecs_service" "app_service" {
+resource "aws_ecs_service" "blockchain_app_service" {
   name            = "blockchain-client-service"
   cluster         = data.aws_ecs_cluster.ecs-blockchain.id
   task_definition = aws_ecs_task_definition.app_task.arn
