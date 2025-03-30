@@ -53,9 +53,8 @@ pytest pytest/test_main.py
 ## Infrastructure (Terraform)
 - Uses **AWS ECS Fargate** for serverless container deployment.
 - Creates an ECS execution role through AWS IAM that enables to pull an image from ECR
-- assumes pre-existing resources like VPC, Subnet, SecurityGroup and ECR
 
 ## Github workflows
 The project utilizes simple GH workflows to:
-- validate infrastructure code (validate-infra.yml[.github/workflows/validate-infra.yml])
-- deploy a tested and built app to ECR and create an ECS infrastructure stack that pulls image from ECR (deployment.yml[.github/workflows/deployment.yml])
+- validate infrastructure code (validate-infra.yml[https://github.com/AugustBrzuzy/blockchain-client/blob/main/.github/workflows/validate-infra.yml])
+- deploy a tested and built app to ECR and create an ECS infrastructure stack that pulls image from ECR (deployment.yml[https://github.com/AugustBrzuzy/blockchain-client/blob/main/.github/workflows/deployment.yml])
