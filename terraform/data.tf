@@ -1,4 +1,3 @@
-
 data "aws_subnet" "ecs_subnet" {
   id = var.subnet_id
 }
