@@ -1,7 +1,5 @@
-# Dynamically retrieve AWS account information
 data "aws_caller_identity" "current" {}
 
-# Use the account ID dynamically
 output "account_id" {
   value = data.aws_caller_identity.current.account_id
 }
