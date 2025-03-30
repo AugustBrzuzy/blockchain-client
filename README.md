@@ -89,7 +89,7 @@ To make this project production-ready, the following enhancements should be cons
 - **Metrics and Alerts**: Use AWS CloudWatch Metrics and Alarms to monitor ECS service performance and set up alerts for critical issues.
 - **Error Handling**: Improve error handling in the FastAPI application to return meaningful error messages and log detailed stack traces.
 
-### **5. CI/CD Pipeline**
+### **5. CI/CD**
 - **Automated Testing**: Expand the test suite to include integration and end-to-end tests. Ensure all tests are run in the CI pipeline.
 - **Docker Image Scanning**: Use tools like AWS ECR image scanning or Trivy to detect vulnerabilities in the Docker image.
 - **Terraform Validation**: Ensure the `validate-infra.yml` workflow validates and plans Terraform changes before deployment.
