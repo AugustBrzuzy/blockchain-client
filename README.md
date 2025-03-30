@@ -64,6 +64,7 @@ The project utilizes simple GH workflows to:
 To make this project production-ready, the following enhancements should be considered:
 
 ### **1. Security Improvements**
+- **Repository Security**: Work on further enhancements should be concluded in a private repository :)
 - **API Authentication**: Implement API keys or OAuth2 authentication to restrict access.
 - **HTTPS Enforcement**: Use a load balancer with an SSL certificate to ensure secure communication.
 - **Environment Variables**: Store sensitive data (e.g., API keys) in AWS Secrets Manager or Parameter Store.
