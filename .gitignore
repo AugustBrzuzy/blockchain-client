@@ -1,0 +1,39 @@
+# Python-related
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+venv/
+env/
+__pycache__
+
+# pytest cache
+.pytest_cache/
+pytest/__pycache__
+
+# Terraform-related
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Docker-related
+*.dockerignore
+Dockerfile~
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# IDE-specific files
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
