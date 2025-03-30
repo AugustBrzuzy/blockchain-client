@@ -56,5 +56,5 @@ pytest pytest/test_main.py
 
 ## Github workflows
 The project utilizes simple GH workflows to:
-- validate infrastructure code - validate-infra.yml https://github.com/AugustBrzuzy/blockchain-client/blob/main/.github/workflows/validate-infra.yml
-- deploy a tested and built app to ECR and create an ECS infrastructure stack that pulls image from ECR - deployment.yml https://github.com/AugustBrzuzy/blockchain-client/blob/main/.github/workflows/deployment.yml
+- validate infrastructure code - validate-infra.yml[https://github.com/AugustBrzuzy/blockchain-client/blob/main/.github/workflows/validate-infra.yml]
+- deploy a tested and built app to ECR and create an ECS infrastructure stack that pulls image from ECR - deployment.yml[https://github.com/AugustBrzuzy/blockchain-client/blob/main/.github/workflows/deployment.yml]
