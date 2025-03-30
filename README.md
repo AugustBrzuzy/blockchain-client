@@ -95,6 +95,7 @@ To make this project production-ready, the following enhancements should be cons
 - **Error Handling**: Improve error handling in the FastAPI application to return meaningful error messages and log detailed stack traces.
 
 ### **6. CI/CD**
+- **Efficient Use of GitHub**: With growth of the project all reusable code should be split into Actions: a universally resusable layer .github/actions/* to enable more scalable development. 
 - **Automated Testing**: Expand the test suite to include integration and end-to-end tests. Ensure all tests are run in the CI pipeline.
 - **Docker Image Scanning**: Use tools like AWS ECR image scanning or Trivy to detect vulnerabilities in the Docker image.
 - **Terraform Validation**: Ensure the `validate-infra.yml` workflow validates and plans Terraform changes before deployment.
