@@ -22,3 +22,15 @@ resource "aws_ecs_task_definition" "blockchain_app_task" {
     cpu_architecture        = "ARM64"
   }
 }
+
+resource "aws_ecs_service" "app_service" {
+  name            = "blockchain-client-service"
+  cluster         = data.aws_ecs_cluster.ecs-blockchain.id
+  task_definition = aws_ecs_task_definition.app_task.arn
+
+  network_configuration {
+    subnets          = [data.aws_subnet.ecs_subnet.id]
+    security_groups  = [data.aws_security_group.ecs_sg.id]
+    assign_public_ip = false
+  }
+}
