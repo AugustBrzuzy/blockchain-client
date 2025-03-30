@@ -14,6 +14,10 @@ resource "aws_ecs_task_definition" "blockchain_app_task" {
 #     }
 #   ])
 
-  
+    ## necessary while using Fargate compatibility
+    runtime_platform {
+    operating_system_family = "LINUX"
+    cpu_architecture        = "ARM64"
+  }
 }
 
