@@ -5,14 +5,16 @@ resource "aws_ecs_task_definition" "blockchain_app_task" {
   cpu                      = "256"
   memory                   = "512"
 
-#   container_definitions = jsonencode([
-#     {
-#       name      = ,
-#       image     = ,
-#       portMappings = [{ containerPort = 8000, hostPort = 8000 }],
-#       essential = true
-#     }
-#   ])
+  execution_role_arn = aws_iam_role.ecs_task_execution_role.arn
+
+  container_definitions = jsonencode([
+    {
+      name      = "blockchain-client",
+      image     = "${data.aws_caller_identity.current.account_id}.dkr.ecr.${var.aws_region}.amazonaws.com/${ecr_name}:latest",
+      portMappings = [{ containerPort = 8000, hostPort = 8000 }],
+      essential = true
+    }
+  ])
 
     ## necessary while using Fargate compatibility
     runtime_platform {
@@ -20,4 +22,3 @@ resource "aws_ecs_task_definition" "blockchain_app_task" {
     cpu_architecture        = "ARM64"
   }
 }
-
